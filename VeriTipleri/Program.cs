@@ -88,7 +88,7 @@ namespace VeriTipleri
             }
             else
             {
-                Console.WriteLine("Dışarı çıkabilirsin.");
+                Console.WriteLine("Dışarı çıkabilirsin..");
             }
 
             // Karşılaştırma operatörleri ile kullanım
