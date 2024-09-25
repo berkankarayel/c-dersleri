@@ -10,8 +10,7 @@ namespace ders2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("deneme");
-            Console.ReadLine();
+            
         }
     }
 }
