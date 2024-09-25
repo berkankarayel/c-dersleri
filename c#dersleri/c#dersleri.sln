@@ -5,8 +5,6 @@ VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DERS1(veritipleri-operatörler)", "DERS1(veritipleri-operatörler).csproj", "{0D25CA64-346E-4EB6-87A4-FC1D9B493B64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ders2", "..\ders2\ders2.csproj", "{BC6A7426-45FD-4CDA-9EA9-425BD774387E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeriTipleri", "..\VeriTipleri\VeriTipleri.csproj", "{5C8749B6-716F-4526-9AA6-40D0B6CD76D6}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{0D25CA64-346E-4EB6-87A4-FC1D9B493B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D25CA64-346E-4EB6-87A4-FC1D9B493B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D25CA64-346E-4EB6-87A4-FC1D9B493B64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC6A7426-45FD-4CDA-9EA9-425BD774387E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC6A7426-45FD-4CDA-9EA9-425BD774387E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC6A7426-45FD-4CDA-9EA9-425BD774387E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC6A7426-45FD-4CDA-9EA9-425BD774387E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5C8749B6-716F-4526-9AA6-40D0B6CD76D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5C8749B6-716F-4526-9AA6-40D0B6CD76D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C8749B6-716F-4526-9AA6-40D0B6CD76D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
