@@ -78,6 +78,122 @@ namespace donguler
 
 
 
+     // Örnek: Öğrencilerin Notlarını Hesaplama ve İstatistikleri Görüntüleme
+
+
+
+         // Öğrenci sayısını belirleme
+        int[] notlar = { 85, 78, 92, 60, 70, 88, 55, 95, 100, 45 };
+
+        // Toplam notları saklamak için değişken
+        int toplam = 0;
+
+        // En yüksek ve en düşük notları belirlemek için başlangıç değerleri
+        int enYuksekNot = notlar[0];
+        int enDusukNot = notlar[0];
+
+        // Barajı geçme durumu için kaç öğrenci geçtiğini tutacak sayaç
+        int barajiGecenOgrenciSayisi = 0;
+        int baraj = 60;  // Baraj notu
+
+        // For döngüsüyle her bir öğrencinin notunu işleme
+        for (int i = 0; i < notlar.Length; i++)
+        {
+            int not = notlar[i];
+
+            // Toplam notu hesapla
+            toplam += not;
+
+            // En yüksek notu bul
+            if (not > enYuksekNot)
+            {
+                enYuksekNot = not;
+            }
+
+            // En düşük notu bul
+            if (not < enDusukNot)
+            {
+                enDusukNot = not;
+            }
+
+            // Barajı geçen öğrenci sayısını bul
+            if (not >= baraj)
+            {
+                barajiGecenOgrenciSayisi++;
+            }
+
+            // Eğer bir öğrenci 100 aldıysa döngüyü erken bitir
+            if (not == 100)
+            {
+                Console.WriteLine("100 alan öğrenci bulundu! Döngüden çıkılıyor...");
+                break;  // Döngüden çık
+            }
+
+            // Eğer bir öğrenci 45 aldıysa bu öğrenciyi atla
+            if (not == 45)
+            {
+                Console.WriteLine("45 alan öğrenci atlandı.");
+                continue;  // Döngünün geri kalanını atlayıp bir sonraki adıma geç
+            }
+
+            // Notu ekrana yazdır
+            Console.WriteLine($"Öğrenci {i + 1}: Notu = {not}");
+        }
+
+        // Ortalama hesaplama
+        double ortalama = (double)toplam / notlar.Length;
+
+        // Sonuçları ekrana yazdırma
+        Console.WriteLine("\nNot İstatistikleri:");
+        Console.WriteLine($"Ortalama Not: {ortalama:F2}");
+        Console.WriteLine($"En Yüksek Not: {enYuksekNot}");
+        Console.WriteLine($"En Düşük Not: {enDusukNot}");
+        Console.WriteLine($"Barajı Geçen Öğrenci Sayısı: {barajiGecenOgrenciSayisi}");
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
 
 
             
