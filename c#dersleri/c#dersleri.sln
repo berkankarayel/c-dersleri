@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DERS1(veritipleri-operatör
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ders2", "..\ders2\ders2.csproj", "{BC6A7426-45FD-4CDA-9EA9-425BD774387E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DONGULER", "..\DONGULER\DONGULER.csproj", "{2B08E97E-CD0D-4758-ABE6-4BAC0771DD7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BC6A7426-45FD-4CDA-9EA9-425BD774387E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC6A7426-45FD-4CDA-9EA9-425BD774387E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC6A7426-45FD-4CDA-9EA9-425BD774387E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B08E97E-CD0D-4758-ABE6-4BAC0771DD7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B08E97E-CD0D-4758-ABE6-4BAC0771DD7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B08E97E-CD0D-4758-ABE6-4BAC0771DD7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B08E97E-CD0D-4758-ABE6-4BAC0771DD7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
