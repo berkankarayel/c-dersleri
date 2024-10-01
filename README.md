@@ -3,3 +3,4 @@
 
 2. [Operatörler](https://github.com/berkankarayel/c-dersleri/blob/master/operatorler/Program.cs)
 
+3.[Tür Dönüşümleri](https://github.com/berkankarayel/c-dersleri/blob/master/TurDonusumleri/Program.cs)
