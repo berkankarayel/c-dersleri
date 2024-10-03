@@ -107,6 +107,33 @@ namespace KararYapilari
                 }
 
 
+                //************************ Örnek 3 *********************
+
+                Console.WriteLine("Birinci sayıyı giriniz:");
+double sayi1 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("İkinci sayıyı giriniz:");
+double sayi2 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Yapmak istediğiniz işlemi seçiniz: +, -, *, /");
+char islem = Convert.ToChar(Console.ReadLine());
+
+if (islem == '+') {
+    Console.WriteLine("Sonuç: " + (sayi1 + sayi2));
+} else if (islem == '-') {
+    Console.WriteLine("Sonuç: " + (sayi1 - sayi2));
+} else if (islem == '*') {
+    Console.WriteLine("Sonuç: " + (sayi1 * sayi2));
+} else if (islem == '/') {
+    if (sayi2 != 0) {
+        Console.WriteLine("Sonuç: " + (sayi1 / sayi2));
+    } else {
+        Console.WriteLine("Bir sayı sıfıra bölünemez.");
+    }
+} else {
+    Console.WriteLine("Geçersiz işlem seçildi.");
+}
+
             }
 
     }
