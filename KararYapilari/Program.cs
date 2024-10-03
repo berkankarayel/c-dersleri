@@ -19,7 +19,7 @@ namespace KararYapilari
                 Console.WriteLine("Lütfen yapmak istediğiniz işlemi seçiniz");
                 Console.WriteLine("1. Bakiye görüntüleme");
                 Console.WriteLine("2. Para çekme");
-                Console.WriteLine("3. Para yatırma");
+                Console.WriteLine("3. Para yatırmaa");
                 Console.WriteLine("4. Çıkış");
 
                 string secim = Console.ReadLine();
