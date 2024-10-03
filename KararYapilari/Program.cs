@@ -15,7 +15,7 @@ namespace KararYapilari
 
             while (true)
             {
-                Console.WriteLine("ATM'ye hoş geldiniz");
+                Console.WriteLine("ATM'ye hoş geldinizz");
                 Console.WriteLine("Lütfen yapmak istediğiniz işlemi seçiniz");
                 Console.WriteLine("1. Bakiye görüntüleme");
                 Console.WriteLine("2. Para çekme");
