@@ -32,7 +32,7 @@ namespace VeriTipleri
 
             short ikinciDegisken = 25550;
 
-            short ucuncuDegisken = 32000;
+            short ucuncuDegisken = 32000000;
 
             short MaxDeger = short.MaxValue;
 
