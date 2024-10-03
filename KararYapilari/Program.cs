@@ -91,7 +91,7 @@ namespace KararYapilari
 
                 if (tahmin < rastgeleSayi)
                 {
-                    Console.WriteLine("Daha büyük bir sayı seçin.");
+                    Console.WriteLine("Daha büyük bir sayı seçinn.");
                     altSinir = tahmin + 1; // Alt sınırı güncelle
                 }
                 else if (tahmin > rastgeleSayi)
