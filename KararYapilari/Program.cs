@@ -96,7 +96,7 @@ namespace KararYapilari
                 }
                 else if (tahmin > rastgeleSayi)
                 {
-                    Console.WriteLine("Daha küçük bir sayı seçinnn.");
+                    Console.WriteLine("Daha küçük bir sayı seçinnnn.");
                     ustSinir = tahmin - 1; // Üst sınırı güncelle
                 }
                 else
