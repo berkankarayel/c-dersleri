@@ -11,15 +11,15 @@ namespace KararYapilari
     {
         static void Main(string[] args)
         {
-            int bakiye = 5000; // Bakiye değişkeni döngü dışında tanımlanıyor
+            int bakiye = 500000000; // Bakiye değişkeni döngü dışında tanımlanıyor
 
             while (true)
             {
                 Console.WriteLine("ATM'ye hoş geldinizz");
-                Console.WriteLine("Lütfen yapmak istediğiniz işlemi seçiniz");
+                Console.WriteLine("Lütfen yapmak istediğiniz işlemi seçinizz");
                 Console.WriteLine("1. Bakiye görüntüleme");
                 Console.WriteLine("2. Para çekme");
-                Console.WriteLine("3. Para yatırmaa");
+                Console.WriteLine("3. Para yatırmaaaaa");
                 Console.WriteLine("4. Çıkış");
 
                 string secim = Console.ReadLine();
