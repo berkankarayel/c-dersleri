@@ -6,3 +6,5 @@
 1. [Tür Dönüşümleri](https://github.com/berkankarayel/c-dersleri/blob/master/TurDonusumleri/Program.cs)
 
 1. [Karar Yapıları](https://github.com/berkankarayel/c-dersleri/blob/master/KararYapilari/Program.cs)
+
+1. [Donguler](https://github.com/berkankarayel/c-dersleri/blob/master/donguler/Program.cs)
