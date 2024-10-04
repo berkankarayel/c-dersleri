@@ -50,7 +50,7 @@ namespace donguler
             {
                 faktoriyel *= i;
             }
-
+            // interpolated dizgiler
             Console.WriteLine($"{sayi}! = {faktoriyel}");
 
 
@@ -117,16 +117,38 @@ namespace donguler
 
 
 
+            // While Döngüsü
+            /* bir koşul doğru olduğu sürece bir kod bloğunu tekrar tekrar çalıştıran bir döngü yapısıdır.
+               Yani koşul sağlandığı sürece döngü devam eder, koşul yanlış olduğunda döngü sona erer.*/
 
 
+            // Örnek1:   1'den 5'e kadar sayıları while döngüsü ile yazdıralım:
 
+            int i = 1;
 
+            while (i <= 5)
+            {
+                Console.WriteLine(i);
+                i++; // sayaç her adımda 1 artırılıyor
+            }
 
+            // Örnek 2: Kullanıcıdan Doğru Şifre Alana Kadar Sorma
 
+            string dogruSifre = "1234";
+            string girilenSifre = "";
 
+            while (girilenSifre != dogruSifre)
+            {
+                Console.Write("Şifreyi girin: ");
+                girilenSifre = Console.ReadLine();
 
+                if (girilenSifre != dogruSifre)
+                {
+                    Console.WriteLine("Yanlış şifre, tekrar deneyin.");
+                }
+            }
 
-
+            Console.WriteLine("Şifre doğru, giriş başarılı!");
 
 
         }
