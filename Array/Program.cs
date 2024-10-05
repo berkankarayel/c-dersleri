@@ -22,7 +22,7 @@ namespace Array
             sayilar[1] = 20;
             sayilar[2] = 30;
             sayilar[3] = 40;
-            sayilar[4] = 50;
+            sayilar[4] = 500;
 
 
             // 2. Diziyi Tanımlarken Değer Atama
