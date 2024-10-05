@@ -8,3 +8,5 @@
 1. [Karar Yapıları](https://github.com/berkankarayel/c-dersleri/blob/master/KararYapilari/Program.cs)
 
 1. [Donguler](https://github.com/berkankarayel/c-dersleri/blob/master/donguler/Program.cs)
+
+1. [Array](https://github.com/berkankarayel/c-dersleri/blob/master/Array/Program.cs)
