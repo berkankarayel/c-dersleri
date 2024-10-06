@@ -102,7 +102,7 @@ namespace Array
             // Örnek: Dizide Kullanıcının Girdiği Sayıyı Arama
 
             // Sabit bir dizi tanımlayalım
-            int[] sayilar = { 5, 12, 23, 34, 45, 56, 67, 78, 89 };
+            int[] sayilar = { 10, 12, 23, 34, 45, 56, 67, 78, 89 };
 
             // Kullanıcının doğru sayıyı bulana kadar döngüye girmesi için sonsuz bir döngü oluşturuyoruz
             bool bulundu = false; // Sayının bulunup bulunmadığını takip etmek için
