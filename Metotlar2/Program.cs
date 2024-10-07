@@ -9,111 +9,121 @@ namespace Metotlar2
     internal class Program
     {
 
-        // öğrenci bilgilerini tutacak değişkenelr her taraftan erişecleği için burda tutulur 
-
-        static string ogrenciAd;
-        static string ogrenciSoyad;
-        static int[] notlar = new int[3]; // 3 sınav notu için dizi
-
+     
         static void Main(string[] args)
         {
 
-            bool programDevamEdiyor = true;
-
-            while (programDevamEdiyor)
-            {
-                // Ana menüyü ekrana yazdıran metot
-                MenuYazdir();
-
-                // Kullanıcı seçim yapıyor
-                string giris = Console.ReadLine();
-                int secim;
-
-                // Girilen değerin sayıya çevrilebilir olup olmadığını kontrol ediyoruz
-                if (int.TryParse(giris, out secim))
-                {
-                    switch (secim)
-                    {
-                        case 1:
-                            // Kullanıcıdan öğrenci bilgilerini al
-                            Console.Write("Öğrenci Adı: ");
-                            string isim = Console.ReadLine(); // Kullanıcıdan isim al
-                            Console.Write("Öğrenci Soyadı: ");
-                            string soyisim = Console.ReadLine(); // Kullanıcıdan soyisim al
-
-                            // Öğrenci bilgilerini alıyoruz
-                            OgrenciBilgileriniAl(isim, soyisim);
-                            break;
-                        case 2:
-                            // Öğrenci notlarını alıyoruz
-                            OgrenciNotlariniAl();
-                            break;
-                        case 3:
-                            // Not ortalamasını hesaplayıp sonucu yazdırıyoruz
-                            double ortalama = NotOrtalamasiHesapla();
-                            Console.WriteLine($"Öğrenci Not Ortalaması: {ortalama}");
-                            break;
-                        case 4:
-                            // Programdan çıkış yapılıyor
-                            Console.WriteLine("Programdan çıkılıyor.");
-                            programDevamEdiyor = false;
-                            break;
-                        default:
-                            Console.WriteLine("Geçersiz seçim, lütfen 1 ile 4 arasında bir seçim yapın.");
-                            break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Geçersiz giriş, lütfen bir sayı girin.");
-                }
-            }
+           // 1. Metot Overloading (Metot Aşırı Yükleme): 
+            
+            // Metot aşırı yükleme (overloading), aynı isimde fakat farklı parametre listelerine sahip metotlar tanımlamayı sağlar.
+            // Yani, bir metot ismi, parametre sayısı veya türüne göre farklı görevler yapabilir.
+            // Örnek:
+        Console.WriteLine(Topla(3, 5));          // int parametreler
+        Console.WriteLine(Topla(3.2, 4.8));      // double parametreler
 
 
-        }
+        // 2. Default (Varsayılan) Parametreler
+        // Bir metot çağırıldığında bazı parametreleri vermek zorunda olmayabilirsiniz.
+        // Bunun için varsayılan parametreler kullanılır. Bir parametreye değer verilmezse, varsayılan değer kullanılır.
 
-        // 1.) Parametre almayan ve geriye değer döndürmeyen metot: Menü 
-        static void MenuYazdir()
+        Yazdir("Merhaba");               // Tek parametre ile
+        Yazdir("Merhaba", 5);            // İki parametre ile
+
+// ref Anahtar Kelimesi
+// ref, bir değişkenin referans yoluyla bir metoda geçirilmesini sağlar. Yani, metot içinde bu değişken üzerinde yapılan değişiklikler, o değişkenin çağrıldığı yerin dışında da geçerli olur. Ancak, ref kullanılan bir değişkenin, metoda gönderilmeden önce mutlaka bir değer atanmış olması gerekir.
+
+/*Özetle:
+Metoda girmeden önce değişkene değer atanmış olmalıdır.
+Metot, değişkenin orijinal değerini değiştirebilir.*/
+            
+        int sayi = 5;
+        Console.WriteLine("Metot çağrılmadan önce: " + sayi);  // Çıktı: 5
+        
+        // sayi değişkenini ref ile metoda gönderiyoruz
+        DegeriIkiKatinaCikar(ref sayi);
+        
+        Console.WriteLine("Metot çağrıldıktan sonra: " + sayi); // Çıktı: 10
+
+
+
+ /*
+     out Anahtar Kelimesi
+out, bir değişkenin de referans yoluyla bir metoda gönderilmesini sağlar.
+Ancak ref'ten farklı olarak, out kullanırken metoda girmeden önce değişkene bir değer atanmış olması gerekmez.
+Metot içinde bu değişkene bir değer atanması zorunludur. Yani out parametresi, metot içinde mutlaka bir değer alır.
+            */           
+
+        int carpimSonucu; // Değişkene önceden bir değer atamıyoruz
+        Console.WriteLine("Metot çağrılmadan önce: " + carpimSonucu); // HATA verir! Değer atanmamış
+
+        // out ile carpimSonucu değişkenini metoda gönderiyoruz
+        Carpim(5, 4, out carpimSonucu);
+
+        Console.WriteLine("Metot çağrıldıktan sonra: " + carpimSonucu); // Çıktı: 20
+
+
+
+            /*
+            ref ve out Farkları:
+            ref: Değişkene önceden değer atanmış olmalı. Yani, metoda gönderilmeden önce zaten bir değeri olmalı.
+            out: Değişkene önceden değer atanmış olması gerekmez. Metot içinde mutlaka bir değer atanmalıdır.
+            */
+
+
+
+            // 4. Recursive Methods (Özyinelemeli Metotlar)
+           //  Bir metot kendini çağırıyorsa buna recursive (özyinelemeli) metot denir.
+            // Genellikle tekrarlı işlemleri gerçekleştirmek için kullanılır (örneğin, bir sayının faktöriyelini hesaplama).
+
+             Console.WriteLine(Faktoriyel(5)); // Çıktı: 120
+
+
+            // 5. Expression-bodied Members
+            // Kısa ve tek satırlık metotlar yazarken expression-bodied üyeler kullanılabilir.
+            // Bu, özellikle get/set metotlarında veya küçük hesaplamalar için faydalıdır.
+
+            Console.WriteLine(KareAl(5)); // Çıktı: 25
+            static int KareAl(int sayi) => sayi * sayi;
+
+            
+        }      
+    static int Topla(int a, int b)
+    {
+        return a + b;
+    }
+
+    static double Topla(double a, double b)
+    {
+        return a + b;
+    }
+
+    static void Yazdir(string mesaj, int tekrar = 1)
+    {
+        for (int i = 0; i < tekrar; i++)
         {
-            Console.WriteLine("\nÖğrenci Yönetim Sistemi");
-            Console.WriteLine("1- Öğrenci Bilgilerini Gir ");
-            Console.WriteLine("2- Öğrenci Notlarını Gir");
-            Console.WriteLine("3 - Not Ortalamasını Hesapla");
-            Console.WriteLine("4 - Çıkış");
-            Console.WriteLine("Seçiminizi yapın:");
+            Console.WriteLine(mesaj);
         }
+    }
+    static void DegeriIkiKatinaCikar(ref int sayi)
+    {
+        sayi = sayi * 2; // sayi değişkenini iki katına çıkarıyoruz
+    }
+       
+ static void Carpim(int a, int b, out int sonuc)
+    {
+        sonuc = a * b; // out parametresine bir değer atamak zorundayız
+    }
 
-        // 2. Parametre alan ve geriye değer döndürmeyen metot: Öğrenci bilgilerini al
-
-        static void OgrenciBilgileriniAl(string isim,string soyisim)
-        {
-            ogrenciAd = isim;    // Parametre olarak alınan isim değeri, statik değişken ogrenciAd'a atanır
-            ogrenciSoyad = soyisim; // Parametre olarak alınan soyisim değeri, statik değişken ogrenciSoyad'a atanır
-            Console.WriteLine("Öğrenci bilgileri kaydedildi: {0} {1}", ogrenciAd, ogrenciSoyad);
-        }
-
-        // 2. Parametre alan ve geriye değer döndürmeyen metot: Öğrenci notlarını al
-        static void OgrenciNotlariniAl()
-        {
-            for (int i = 0; i < notlar.Length; i++)
-            {
-                Console.Write($"{i + 1}. Sınav Notunu Girin: ");
-                notlar[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Console.WriteLine("Notlar kaydedildi.");
-        }
-
-        // 3. Geriye değer döndüren metot: Not ortalamasını hesapla
-        static double NotOrtalamasiHesapla()
-        {
-            int toplam = 0;
-            for (int i = 0; i < notlar.Length; i++)
-            {
-                toplam += notlar[i];
-            }
-            double ortalama = toplam / 3.0; // 3 sınavın ortalaması
-            return ortalama; // Ortalamayı geri döndür
-        }
+        static int Faktoriyel(int sayi)
+    {
+        if (sayi <= 1)
+            return 1;
+        else
+            return sayi * Faktoriyel(sayi - 1);
+    }
+       
+       
+       
 
 
     }
